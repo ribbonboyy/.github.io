@@ -1,0 +1,78 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set background and text colors */
+body {
+    background-color: #000; /* Black background */
+    color: #ffffff; /* White text */
+    font-family: 'YourChosenFont', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+}
+
+/* Title style */
+h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs style */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* FIT logo styling */
+.fit-logo {
+    background-color: #0082ca; /* FIT's blue */
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Link style for the 'tune of the week' */
+.tune {
+    color: #3399ff; /* Light blue */
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.tune:hover {
+    text-decoration: underline;
+}
+
+/* Social icons styling */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.social-icons img:hover {
+    filter: grayscale(0%);
+}
