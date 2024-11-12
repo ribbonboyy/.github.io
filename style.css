@@ -19,13 +19,6 @@ body {
     margin: 0;
 }
 
-/* Center the container on the page, but left-align its content */
-.container {
-    text-align: left; /* Align text to the left */
-    max-width: 600px;
-    padding: 20px; /* Optional padding for inner spacing */
-}
-
 /* Title style */
 h1 {
     font-size: 2rem;
@@ -38,14 +31,16 @@ p {
     font-size: 1.2rem;
     margin-bottom: 15px;
 }
-}
 
-/* General container for the buttons */
+/* General container for the content */
 .container {
+    text-align: left; /* Align text to the left */
+    max-width: 600px;
+    padding: 20px; /* Optional padding for inner spacing */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Add space between the buttons */
+    gap: 20px; /* Add space between the elements */
     margin-top: 50px;
 }
 
@@ -106,7 +101,7 @@ a.bitcoin-button:hover {
     background-color: #a15800; /* Darker orange on hover */
 }
 
-/* Logo Styles */
+/* Logo Styles for the buttons */
 a.discord-button .discord-logo,
 a.dragon-button .dragon-logo,
 a.bitcoin-button .bitcoin-logo {
@@ -115,4 +110,3 @@ a.bitcoin-button .bitcoin-logo {
     margin-right: 10px;
     vertical-align: middle;
 }
-
