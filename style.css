@@ -75,14 +75,14 @@ p {
 }
 
 /* Logos inside buttons */
-.discord-logo, .bitcoin-logo {
+.discord-logo, .dragon-button {
     width: 10px; /* Adjust the logo size */
     height: 10px;
     margin-right: 10px;
     vertical-align: middle;
 }
 
-/* Purple button style for Dračíkostka Invite */
+/* Purple button style for Drsfsdgdfgdfačíkostka Invite */
 .bitcoin-button {
     display: inline-flex;
     align-items: center;
