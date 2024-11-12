@@ -74,19 +74,11 @@ p {
     background-color: #8e5cb5; /* Darker purple on hover */
 }
 
-/* Logos inside buttons */
-.discord-logo, .dragon-button {
-    width: 10px; /* Adjust the logo size */
-    height: 10px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-/* Purple button style for Drsfsdgdfgdfačíkostka Invite */
+/* Orange button style for Bitcoin Invite */
 .bitcoin-button {
     display: inline-flex;
     align-items: center;
-    background-color: #ed8505; /* Light purple */
+    background-color: #ed8505; /* Light orange */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -97,13 +89,13 @@ p {
 }
 
 .bitcoin-button:hover {
-    background-color: #a15800; /* Darker purple on hover */
+    background-color: #a15800; /* Darker orange on hover */
 }
 
 /* Logos inside buttons */
-.discord-logo, .bitcoin-logo {
-    width: 10px; /* Adjust the logo size */
-    height: 10px;
+.discord-logo, .dragon-logo, .bitcoin-logo {
+    width: 20px; /* Adjust the logo size */
+    height: 20px;
     margin-right: 10px;
     vertical-align: middle;
 }
