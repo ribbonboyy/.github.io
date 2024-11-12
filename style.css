@@ -1,3 +1,12 @@
+/* General container for the buttons */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Add space between the buttons */
+    margin-top: 50px;
+}
+
 /* Discord button style */
 a.discord-button {
     display: inline-flex;
@@ -8,7 +17,8 @@ a.discord-button {
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 5px;
-    margin-top: 20px;
+    max-width: 300px;
+    width: 100%;
     transition: background-color 0.3s ease;
 }
 
@@ -26,7 +36,8 @@ a.dragon-button {
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 5px;
-    margin-top: 20px;
+    max-width: 300px;
+    width: 100%;
     transition: background-color 0.3s ease;
 }
 
@@ -44,7 +55,8 @@ a.bitcoin-button {
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 5px;
-    margin-top: 20px;
+    max-width: 300px;
+    width: 100%;
     transition: background-color 0.3s ease;
 }
 
@@ -56,7 +68,7 @@ a.bitcoin-button:hover {
 a.discord-button .discord-logo,
 a.dragon-button .dragon-logo,
 a.bitcoin-button .bitcoin-logo {
-    width: 30px; /* Adjust logo size for visibility */
+    width: 30px;
     height: 30px;
     margin-right: 10px;
     vertical-align: middle;
