@@ -1,75 +1,116 @@
-/* General container for the buttons */
+/* General styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4CAF50; /* A pleasant green color */
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Container styling */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Add space between the buttons */
-    margin-top: 50px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Discord button style */
-a.discord-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #7289da; /* Discord blue */
-    color: white;
-    padding: 10px 20px;
+/* Styling for buttons */
+a {
     text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    max-width: 300px;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
-
-a.discord-button:hover {
-    background-color: #5b6eae; /* Darker blue on hover */
-}
-
-/* Purple button style for Dračíkostka Invite */
-a.dragon-button {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    background-color: #a874d1; /* Light purple */
-    color: white;
+    justify-content: center;
     padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
     border-radius: 5px;
-    max-width: 300px;
-    width: 100%;
-    transition: background-color 0.3s ease;
+    margin: 10px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-a.dragon-button:hover {
-    background-color: #8e5cb5; /* Darker purple on hover */
+a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Orange button style for Bitcoin Invite */
-a.bitcoin-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #ed8505; /* Light orange */
+/* Discord button styling */
+.discord-button {
+    background-color: #7289da;
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    max-width: 300px;
-    width: 100%;
-    transition: background-color 0.3s ease;
+    border: 2px solid #4e5d94;
 }
 
-a.bitcoin-button:hover {
-    background-color: #a15800; /* Darker orange on hover */
+.discord-button:hover {
+    background-color: #5a6e99;
 }
 
-/* Logo Styles */
-a.discord-button .discord-logo,
-a.dragon-button .dragon-logo,
-a.bitcoin-button .bitcoin-logo {
-    width: 30px;
+/* Dragon button styling */
+.dragon-button {
+    background-color: #ff4b4b;
+    color: white;
+    border: 2px solid #e12b2b;
+}
+
+.dragon-button:hover {
+    background-color: #e12b2b;
+}
+
+/* BTC copy button styling */
+.copy-btc-button {
+    background-color: #f7931a;
+    color: white;
+    border: 2px solid #e67e22;
+}
+
+.copy-btc-button:hover {
+    background-color: #e67e22;
+}
+
+/* Images inside the buttons */
+.discord-logo, .dragon-logo, .bitcoin-logo {
     height: 30px;
     margin-right: 10px;
-    vertical-align: middle;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
 }
