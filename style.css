@@ -101,10 +101,30 @@ a.bitcoin-button:hover {
     background-color: #a15800; /* Darker orange on hover */
 }
 
+/* New Copy BTC Address button */
+a.copy-btc-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f7931a; /* Bitcoin color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    max-width: 300px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+a.copy-btc-button:hover {
+    background-color: #d07b1c; /* Darker bitcoin color on hover */
+}
+
 /* Logo Styles for the buttons */
 a.discord-button .discord-logo,
 a.dragon-button .dragon-logo,
-a.bitcoin-button .bitcoin-logo {
+a.bitcoin-button .bitcoin-logo,
+a.copy-btc-button .bitcoin-logo {
     width: 30px;
     height: 30px;
     margin-right: 10px;
