@@ -82,30 +82,28 @@ p {
     vertical-align: middle;
 }
 
-/* Copy BTC Address button style */
-.copy-btc-button {
+/* Purple button style for Dračíkostka Invite */
+.dragon-button {
     display: inline-flex;
     align-items: center;
-    background-color: #f7931a; /* Bitcoin orange */
+    background-color: #ed8505; /* Light purple */
     color: white;
     padding: 10px 20px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
     text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
-.copy-btc-button:hover {
-    background-color: #cc7c15; /* Darker orange on hover */
+.dragon-button:hover {
+    background-color: #a15800; /* Darker purple on hover */
 }
 
-/* Bitcoin logo inside the button */
-.bitcoin-logo {
-    width: 16px; /* Adjust icon size as needed */
-    height: 16px;
+/* Logos inside buttons */
+.discord-logo, .dragon-logo {
+    width: 10px; /* Adjust the logo size */
+    height: 10px;
     margin-right: 10px;
     vertical-align: middle;
 }
