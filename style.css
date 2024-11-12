@@ -82,3 +82,67 @@ p {
 .social-icons img:hover {
     filter: grayscale(0%);
 }
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set background and default text colors */
+body {
+    background-color: #000; /* Black background */
+    color: #ffffff; /* White text */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat as the primary font */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Center the container on the page, but left-align its content */
+.container {
+    text-align: left; /* Align text to the left */
+    max-width: 600px;
+    padding: 20px; /* Optional padding for inner spacing */
+}
+
+/* Title style */
+h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs and other text styles */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #b0b0b0; /* Set paragraphs to light grey */
+}
+
+/* Discord button style */
+.discord-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #7289da; /* Discord blue */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.discord-button:hover {
+    background-color: #5b6eae; /* Darker blue on hover */
+}
+
+/* Discord logo inside the button */
+.discord-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
