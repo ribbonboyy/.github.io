@@ -9,7 +9,7 @@
 body {
     background-color: #000; /* Black background */
     color: #ffffff; /* White text */
-    font-family: 'YourChosenFont', sans-serif;
+    font-family: 'YourChosenFont', electrolize;
     display: flex;
     align-items: center;
     justify-content: center;
