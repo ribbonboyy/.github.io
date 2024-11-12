@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono&display=swap');
+
 /* Basic reset */
 * {
     margin: 0;
@@ -9,7 +11,7 @@
 body {
     background-color: #000; /* Black background */
     color: #ffffff; /* White text */
-    font-family: 'YourChosenFont', electrolize;
+    font-family: 'Geist Mono', Electrolize, monospace;
     display: flex;
     align-items: center;
     justify-content: center;
