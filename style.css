@@ -41,7 +41,7 @@ p {
     color: #b0b0b0; /* Set paragraphs to light grey */
 }
 
-/* Discord button style */
+/* Discord button style (for "Join My Server") */
 .discord-button {
     display: inline-flex;
     align-items: center;
@@ -59,8 +59,26 @@ p {
     background-color: #5b6eae; /* Darker blue on hover */
 }
 
-/* Discord logo inside the button */
-.discord-logo {
+/* Purple button style for "Dračíkostka Invite" */
+.dragon-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #a874d1; /* Light purple */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.dragon-button:hover {
+    background-color: #8e5cb5; /* Darker purple on hover */
+}
+
+/* Logos inside buttons */
+.discord-logo, .dragon-logo {
     width: 30px;
     height: 30px;
     margin-right: 10px;
