@@ -1,45 +1,5 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Set background and default text colors */
-body {
-    background-color: #000; /* Black background */
-    color: #b0b0b0; /* Light grey text */
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-}
-
-/* Center the container on the page, but left-align its content */
-.container {
-    text-align: left;
-    max-width: 600px;
-    padding: 20px;
-}
-
-/* Title style */
-h1 {
-    font-size: 2rem;
-    color: #ffffff; /* White color for the h1 */
-    margin-bottom: 20px;
-}
-
-/* Paragraph and link styles */
-p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: #b0b0b0; /* Set paragraphs to light grey */
-}
-
 /* Discord button style */
-.discord-button {
+a.discord-button {
     display: inline-flex;
     align-items: center;
     background-color: #7289da; /* Discord blue */
@@ -52,12 +12,12 @@ p {
     transition: background-color 0.3s ease;
 }
 
-.discord-button:hover {
+a.discord-button:hover {
     background-color: #5b6eae; /* Darker blue on hover */
 }
 
 /* Purple button style for Dračíkostka Invite */
-.dragon-button {
+a.dragon-button {
     display: inline-flex;
     align-items: center;
     background-color: #a874d1; /* Light purple */
@@ -70,12 +30,12 @@ p {
     transition: background-color 0.3s ease;
 }
 
-.dragon-button:hover {
+a.dragon-button:hover {
     background-color: #8e5cb5; /* Darker purple on hover */
 }
 
 /* Orange button style for Bitcoin Invite */
-.bitcoin-button {
+a.bitcoin-button {
     display: inline-flex;
     align-items: center;
     background-color: #ed8505; /* Light orange */
@@ -88,14 +48,16 @@ p {
     transition: background-color 0.3s ease;
 }
 
-.bitcoin-button:hover {
+a.bitcoin-button:hover {
     background-color: #a15800; /* Darker orange on hover */
 }
 
-/* Logos inside buttons */
-.discord-logo, .dragon-logo, .bitcoin-logo {
-    width: 20px; /* Adjust the logo size */
-    height: 20px;
+/* Logo Styles */
+a.discord-button .discord-logo,
+a.dragon-button .dragon-logo,
+a.bitcoin-button .bitcoin-logo {
+    width: 30px; /* Adjust logo size for visibility */
+    height: 30px;
     margin-right: 10px;
     vertical-align: middle;
 }
