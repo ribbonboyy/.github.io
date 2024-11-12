@@ -81,3 +81,31 @@ p {
     margin-right: 10px;
     vertical-align: middle;
 }
+
+/* Copy BTC Address button style */
+.copy-btc-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f7931a; /* Bitcoin orange */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.copy-btc-button:hover {
+    background-color: #cc7c15; /* Darker orange on hover */
+}
+
+/* Bitcoin logo inside the button */
+.bitcoin-logo {
+    width: 16px; /* Adjust icon size as needed */
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
