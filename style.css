@@ -38,47 +38,63 @@ p {
     color: #b0b0b0; /* Set paragraphs to light grey */
 }
 
-/* General button styles */
-button, a {
+/* Discord button style */
+.discord-button {
     display: inline-flex;
     align-items: center;
+    background-color: #7289da; /* Discord blue */
     color: white;
     padding: 10px 20px;
-    font-size: 1.2rem;
     text-decoration: none;
+    font-size: 1.2rem;
     border-radius: 5px;
     margin-top: 20px;
     transition: background-color 0.3s ease;
-}
-
-/* Specific button styles */
-.discord-button {
-    background-color: #7289da; /* Discord blue */
 }
 
 .discord-button:hover {
     background-color: #5b6eae; /* Darker blue on hover */
 }
 
+/* Purple button style for Dračíkostka Invite */
 .dragon-button {
+    display: inline-flex;
+    align-items: center;
     background-color: #a874d1; /* Light purple */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .dragon-button:hover {
     background-color: #8e5cb5; /* Darker purple on hover */
 }
 
+/* Orange button style for Copy BTC Address */
 .bitcoin-button {
+    display: inline-flex;
+    align-items: center;
     background-color: #ed8505; /* Bitcoin orange */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .bitcoin-button:hover {
     background-color: #a15800; /* Darker orange on hover */
 }
 
-/* Icons inside buttons */
+/* Logos inside buttons */
 .discord-logo, .dragon-logo, .bitcoin-logo {
-    width: 16px; /* Adjust icon size as needed */
+    width: 16px; /* Adjust the logo size */
     height: 16px;
     margin-right: 10px;
     vertical-align: middle;
