@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono&display=swap');
+/* Import Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* Basic reset */
 * {
@@ -7,11 +8,11 @@
     box-sizing: border-box;
 }
 
-/* Set background and text colors */
+/* Set background and default text colors */
 body {
     background-color: #000; /* Black background */
-    color: #ffffff; /* White text */
-    font-family: 'Geist Mono', Electrolize, monospace;
+    color: #b0b0b0; /* Light grey text */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat as the primary font */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,14 +30,15 @@ body {
 /* Title style */
 h1 {
     font-size: 2rem;
-    color: #ffffff;
+    color: #ffffff; /* White color for the h1 */
     margin-bottom: 20px;
 }
 
-/* Paragraphs style */
+/* Paragraphs and other text styles */
 p {
     font-size: 1.2rem;
     margin-bottom: 15px;
+    color: #b0b0b0; /* Set paragraphs to light grey */
 }
 
 /* FIT logo styling */
