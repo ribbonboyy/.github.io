@@ -74,11 +74,19 @@ p {
     background-color: #8e5cb5; /* Darker purple on hover */
 }
 
-/* Orange button style for Copy BTC Address */
+/* Logos inside buttons */
+.discord-logo, .dragon-button {
+    width: 10px; /* Adjust the logo size */
+    height: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Purple button style for Drsfsdgdfgdfačíkostka Invite */
 .bitcoin-button {
     display: inline-flex;
     align-items: center;
-    background-color: #ed8505; /* Bitcoin orange */
+    background-color: #ed8505; /* Light purple */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -89,13 +97,13 @@ p {
 }
 
 .bitcoin-button:hover {
-    background-color: #a15800; /* Darker orange on hover */
+    background-color: #a15800; /* Darker purple on hover */
 }
 
 /* Logos inside buttons */
-.discord-logo, .dragon-logo, .bitcoin-logo {
-    width: 16px; /* Adjust the logo size */
-    height: 16px;
+.discord-logo, .bitcoin-logo {
+    width: 10px; /* Adjust the logo size */
+    height: 10px;
     margin-right: 10px;
     vertical-align: middle;
 }
