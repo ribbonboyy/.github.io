@@ -34,12 +34,6 @@
             margin-bottom: 20px;
         }
 
-        /* Paragraphs style */
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-
         /* General container for the content */
         .container {
             text-align: left; /* Align text to the left */
@@ -115,17 +109,6 @@
             background-color: #6a3310;
         }
 
-        /* Logo Styles for the buttons */
-        a.discord-button .discord-logo,
-        a.dragon-button .dragon-logo,
-        a.bitcoin-button .bitcoin-logo,
-        a.copy-btc-button .bitcoin-logo,
-        a.copy-coffee-button .coffee-logo {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-        }
-
         /* Talk bubble notification style */
         #talk-bubble {
             position: fixed;
@@ -160,9 +143,29 @@
             <a href="#" class="discord-button"><span class="discord-logo"></span>Discord</a>
             <a href="#" class="dragon-button"><span class="dragon-logo"></span>Dračíkostka Invite</a>
             <a href="#" class="bitcoin-button"><span class="bitcoin-logo"></span>Bitcoin Invite</a>
-            <a href="#" class="copy-btc-button"><span class="bitcoin-logo"></span>Copy BTC Address</a>
-            <a href="#" class="copy-coffee-button"><span class="coffee-logo"></span>Coffee Invite</a>
+            <a href="#" class="copy-btc-button" onclick="copyToClipboard('your-bitcoin-address')"><span class="bitcoin-logo"></span>Copy BTC Address</a>
+            <a href="#" class="copy-coffee-button" onclick="copyToClipboard('your-coffee-address')"><span class="coffee-logo"></span>Coffee Invite</a>
         </div>
     </div>
+
+    <div id="talk-bubble" class="hidden">Copied to clipboard!</div>
+
+    <script>
+        function copyToClipboard(text) {
+            // Copy text to clipboard
+            navigator.clipboard.writeText(text).then(() => {
+                // Show notification
+                const bubble = document.getElementById("talk-bubble");
+                bubble.classList.remove("hidden");
+                
+                // Hide notification after 1.5 seconds
+                setTimeout(() => {
+                    bubble.classList.add("hidden");
+                }, 1500);
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
 </body>
 </html>
