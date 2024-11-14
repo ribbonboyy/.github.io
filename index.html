@@ -29,22 +29,49 @@
             Dračíkostka Invite
         </a>
         
-        <!-- New Copy BTC Address button -->
+        <!-- Copy BTC Address button -->
         <a href="javascript:void(0)" class="copy-btc-button" onclick="copyBTCAddress()">
             <img src="bitcoin.256x256.png" alt="Bitcoin Logo" class="bitcoin-logo">
             Copy BTC Address
         </a>
+
+        <!-- New Coffee button -->
+        <a href="javascript:void(0)" class="copy-coffee-button" onclick="copyCoffee()">
+            <img src="admin.png" alt="Coffee Logo" class="coffee-logo">
+            Copy Coffee
+        </a>
+
+        <!-- Talk bubble for notifications -->
+        <div id="talk-bubble" class="talk-bubble hidden">Copied to clipboard.</div>
     </div>
 
     <script>
+        function showTalkBubble() {
+            const bubble = document.getElementById("talk-bubble");
+            bubble.classList.remove("hidden");
+            setTimeout(() => {
+                bubble.classList.add("hidden");
+            }, 2000); // Hides bubble after 2 seconds
+        }
+
         function copyBTCAddress() {
             const btcAddress = "bc1qx58hp0wp4mtddaq6x7mas43swhmdejh98xgd67";
             navigator.clipboard.writeText(btcAddress).then(() => {
-                alert("BTC Address copied to clipboard!");
+                showTalkBubble();
             }).catch(err => {
                 console.error("Failed to copy BTC address:", err);
+            });
+        }
+
+        function copyCoffee() {
+            const coffeeText = "coffee";
+            navigator.clipboard.writeText(coffeeText).then(() => {
+                showTalkBubble();
+            }).catch(err => {
+                console.error("Failed to copy coffee text:", err);
             });
         }
     </script>
 </body>
 </html>
+
