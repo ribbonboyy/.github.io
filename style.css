@@ -95,13 +95,6 @@
             background-color: #a15800;
         }
 
-        .coffee-button {
-            background-color: #8b4513;
-        }
-        .coffee-button:hover {
-            background-color: #6a3310;
-        }
-
         /* Talk bubble notification style */
         #talk-bubble {
             position: fixed;
@@ -138,7 +131,6 @@
             <a href="#" class="button discord-button">Join My Server</a>
             <a href="#" class="button dragon-button">Dračíkostka Invite</a>
             <a href="#" class="button bitcoin-button" onclick="copyToClipboard('your-bitcoin-address')">Copy BTC Address</a>
-            <a href="#" class="button coffee-button" onclick="copyToClipboard('your-coffee-address')">Click for the key to happiness</a>
         </div>
     </div>
 
