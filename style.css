@@ -101,7 +101,7 @@ a.bitcoin-button:hover {
     background-color: #a15800; /* Darker orange on hover */
 }
 
-/* New Copy BTC Address button */
+/* Copy BTC Address button */
 a.copy-btc-button {
     display: inline-flex;
     align-items: center;
@@ -120,13 +120,59 @@ a.copy-btc-button:hover {
     background-color: #d07b1c; /* Darker bitcoin color on hover */
 }
 
+/* New Coffee button style */
+a.copy-coffee-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #8b4513; /* Coffee-like brown color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    max-width: 300px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+a.copy-coffee-button:hover {
+    background-color: #6a3310; /* Darker coffee color on hover */
+}
+
 /* Logo Styles for the buttons */
 a.discord-button .discord-logo,
 a.dragon-button .dragon-logo,
 a.bitcoin-button .bitcoin-logo,
-a.copy-btc-button .bitcoin-logo {
+a.copy-btc-button .bitcoin-logo,
+a.copy-coffee-button .coffee-logo {
     width: 30px;
     height: 30px;
     margin-right: 10px;
     vertical-align: middle;
+}
+
+/* Talk bubble notification style */
+#talk-bubble {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Makes the bubble non-interactive */
+}
+
+/* Show the bubble when copying */
+#talk-bubble:not(.hidden) {
+    opacity: 1;
+}
+
+/* Hidden class to toggle visibility */
+.hidden {
+    opacity: 0;
 }
