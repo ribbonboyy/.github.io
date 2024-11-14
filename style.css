@@ -1,178 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Layout</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono&display=swap">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        /* Set background and text colors */
+        body {
+            background-color: #000; /* Black background */
+            color: #ffffff; /* White text */
+            font-family: 'Geist Mono', Electrolize, monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
 
-/* Set background and text colors */
-body {
-    background-color: #000; /* Black background */
-    color: #ffffff; /* White text */
-    font-family: 'Geist Mono', Electrolize, monospace;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-}
+        /* Title style */
+        h1 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
 
-/* Title style */
-h1 {
-    font-size: 2rem;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
+        /* Paragraphs style */
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
 
-/* Paragraphs style */
-p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
+        /* General container for the content */
+        .container {
+            text-align: left; /* Align text to the left */
+            max-width: 600px;
+            padding: 20px; /* Optional padding for inner spacing */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* Add space between the elements */
+            margin-top: 50px;
+        }
 
-/* General container for the content */
-.container {
-    text-align: left; /* Align text to the left */
-    max-width: 600px;
-    padding: 20px; /* Optional padding for inner spacing */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Add space between the elements */
-    margin-top: 50px;
-}
+        /* Container for the buttons to allow wrapping */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Space between buttons */
+            justify-content: center; /* Center align buttons */
+        }
 
-/* Discord button style */
-a.discord-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #7289da; /* Discord blue */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    max-width: 300px;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
+        /* Adjust each button to take half of the container width */
+        a.discord-button,
+        a.dragon-button,
+        a.bitcoin-button,
+        a.copy-btc-button,
+        a.copy-coffee-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            width: 48%; /* Each button takes up about half the width of the container */
+            max-width: none; /* Remove max-width to ensure they fit properly */
+            transition: background-color 0.3s ease;
+            color: white;
+            text-align: center;
+        }
 
-a.discord-button:hover {
-    background-color: #5b6eae; /* Darker blue on hover */
-}
+        /* Specific button colors */
+        a.discord-button {
+            background-color: #7289da; /* Discord blue */
+        }
+        a.discord-button:hover {
+            background-color: #5b6eae;
+        }
 
-/* Purple button style for Dračíkostka Invite */
-a.dragon-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #a874d1; /* Light purple */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    max-width: 300px;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
+        a.dragon-button {
+            background-color: #a874d1; /* Light purple */
+        }
+        a.dragon-button:hover {
+            background-color: #8e5cb5;
+        }
 
-a.dragon-button:hover {
-    background-color: #8e5cb5; /* Darker purple on hover */
-}
+        a.bitcoin-button {
+            background-color: #ed8505; /* Light orange */
+        }
+        a.bitcoin-button:hover {
+            background-color: #a15800;
+        }
 
-/* Orange button style for Bitcoin Invite */
-a.bitcoin-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #ed8505; /* Light orange */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    max-width: 300px;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
+        a.copy-btc-button {
+            background-color: #f7931a; /* Bitcoin color */
+        }
+        a.copy-btc-button:hover {
+            background-color: #d07b1c;
+        }
 
-a.bitcoin-button:hover {
-    background-color: #a15800; /* Darker orange on hover */
-}
+        a.copy-coffee-button {
+            background-color: #8b4513; /* Coffee-like brown color */
+        }
+        a.copy-coffee-button:hover {
+            background-color: #6a3310;
+        }
 
-/* Copy BTC Address button */
-a.copy-btc-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #f7931a; /* Bitcoin color */
-    color: white;
-    padding: 10px 10px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    max-width: 300px;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
+        /* Logo Styles for the buttons */
+        a.discord-button .discord-logo,
+        a.dragon-button .dragon-logo,
+        a.bitcoin-button .bitcoin-logo,
+        a.copy-btc-button .bitcoin-logo,
+        a.copy-coffee-button .coffee-logo {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
 
-a.copy-btc-button:hover {
-    background-color: #d07b1c; /* Darker bitcoin color on hover */
-}
+        /* Talk bubble notification style */
+        #talk-bubble {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none; /* Makes the bubble non-interactive */
+        }
 
-/* New Coffee button style */
-a.copy-coffee-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #8b4513; /* Coffee-like brown color */
-    color: white;
-    padding: 10px 10px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    max-width: 300px;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
+        /* Show the bubble when copying */
+        #talk-bubble:not(.hidden) {
+            opacity: 1;
+        }
 
-a.copy-coffee-button:hover {
-    background-color: #6a3310; /* Darker coffee color on hover */
-}
-
-/* Logo Styles for the buttons */
-a.discord-button .discord-logo,
-a.dragon-button .dragon-logo,
-a.bitcoin-button .bitcoin-logo,
-a.copy-btc-button .bitcoin-logo,
-a.copy-coffee-button .coffee-logo {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-/* Talk bubble notification style */
-#talk-bubble {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none; /* Makes the bubble non-interactive */
-}
-
-/* Show the bubble when copying */
-#talk-bubble:not(.hidden) {
-    opacity: 1;
-}
-
-/* Hidden class to toggle visibility */
-.hidden {
-    opacity: 0;
-}
+        /* Hidden class to toggle visibility */
+        .hidden {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Button Example</h1>
+        <div class="button-container">
+            <a href="#" class="discord-button"><span class="discord-logo"></span>Discord</a>
+            <a href="#" class="dragon-button"><span class="dragon-logo"></span>Dračíkostka Invite</a>
+            <a href="#" class="bitcoin-button"><span class="bitcoin-logo"></span>Bitcoin Invite</a>
+            <a href="#" class="copy-btc-button"><span class="bitcoin-logo"></span>Copy BTC Address</a>
+            <a href="#" class="copy-coffee-button"><span class="coffee-logo"></span>Coffee Invite</a>
+        </div>
+    </div>
+</body>
+</html>
