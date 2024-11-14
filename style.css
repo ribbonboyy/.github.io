@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono&display=swap');
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,78 +33,72 @@
             margin-bottom: 20px;
         }
 
+        /* Paragraphs style */
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
         /* General container for the content */
         .container {
-            text-align: left; /* Align text to the left */
+            text-align: center;
             max-width: 600px;
-            padding: 20px; /* Optional padding for inner spacing */
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px; /* Add space between the elements */
-            margin-top: 50px;
+            gap: 20px;
         }
 
-        /* Container for the buttons to allow wrapping */
+        /* Container for the buttons */
         .button-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px; /* Space between buttons */
-            justify-content: center; /* Center align buttons */
+            gap: 10px;
+            justify-content: center;
         }
 
-        /* Adjust each button to take half of the container width */
-        a.discord-button,
-        a.dragon-button,
-        a.bitcoin-button,
-        a.copy-btc-button,
-        a.copy-coffee-button {
+        /* Button styles */
+        .button {
             display: inline-flex;
             align-items: center;
             padding: 10px 20px;
             text-decoration: none;
             font-size: 1.2rem;
             border-radius: 5px;
-            width: 48%; /* Each button takes up about half the width of the container */
-            max-width: none; /* Remove max-width to ensure they fit properly */
-            transition: background-color 0.3s ease;
             color: white;
             text-align: center;
+            width: calc(50% - 10px); /* Two buttons per row with a 10px gap */
+            box-sizing: border-box;
+            transition: background-color 0.3s ease;
         }
 
         /* Specific button colors */
-        a.discord-button {
-            background-color: #7289da; /* Discord blue */
+        .discord-button {
+            background-color: #7289da;
         }
-        a.discord-button:hover {
+        .discord-button:hover {
             background-color: #5b6eae;
         }
 
-        a.dragon-button {
-            background-color: #a874d1; /* Light purple */
+        .dragon-button {
+            background-color: #a874d1;
         }
-        a.dragon-button:hover {
+        .dragon-button:hover {
             background-color: #8e5cb5;
         }
 
-        a.bitcoin-button {
-            background-color: #ed8505; /* Light orange */
+        .bitcoin-button {
+            background-color: #ed8505;
         }
-        a.bitcoin-button:hover {
+        .bitcoin-button:hover {
             background-color: #a15800;
         }
 
-        a.copy-btc-button {
-            background-color: #f7931a; /* Bitcoin color */
+        .coffee-button {
+            background-color: #8b4513;
         }
-        a.copy-btc-button:hover {
-            background-color: #d07b1c;
-        }
-
-        a.copy-coffee-button {
-            background-color: #8b4513; /* Coffee-like brown color */
-        }
-        a.copy-coffee-button:hover {
+        .coffee-button:hover {
             background-color: #6a3310;
         }
 
@@ -115,14 +108,14 @@
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
             padding: 8px 12px;
             border-radius: 8px;
             font-size: 0.9rem;
             opacity: 0;
             transition: opacity 0.3s ease;
-            pointer-events: none; /* Makes the bubble non-interactive */
+            pointer-events: none;
         }
 
         /* Show the bubble when copying */
@@ -139,12 +132,13 @@
 <body>
     <div class="container">
         <h1>Button Example</h1>
+        <p>You probably got here from the link in my projects, betting my life on it xD</p>
+        <p>I use this website as a playground for learning CSS and HTML and also as a contacts page.</p>
         <div class="button-container">
-            <a href="#" class="discord-button"><span class="discord-logo"></span>Discord</a>
-            <a href="#" class="dragon-button"><span class="dragon-logo"></span>Dračíkostka Invite</a>
-            <a href="#" class="bitcoin-button"><span class="bitcoin-logo"></span>Bitcoin Invite</a>
-            <a href="#" class="copy-btc-button" onclick="copyToClipboard('your-bitcoin-address')"><span class="bitcoin-logo"></span>Copy BTC Address</a>
-            <a href="#" class="copy-coffee-button" onclick="copyToClipboard('your-coffee-address')"><span class="coffee-logo"></span>Coffee Invite</a>
+            <a href="#" class="button discord-button">Join My Server</a>
+            <a href="#" class="button dragon-button">Dračíkostka Invite</a>
+            <a href="#" class="button bitcoin-button" onclick="copyToClipboard('your-bitcoin-address')">Copy BTC Address</a>
+            <a href="#" class="button coffee-button" onclick="copyToClipboard('your-coffee-address')">Click for the key to happiness</a>
         </div>
     </div>
 
@@ -152,9 +146,7 @@
 
     <script>
         function copyToClipboard(text) {
-            // Copy text to clipboard
             navigator.clipboard.writeText(text).then(() => {
-                // Show notification
                 const bubble = document.getElementById("talk-bubble");
                 bubble.classList.remove("hidden");
                 
