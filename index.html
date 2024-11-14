@@ -38,7 +38,7 @@
         <!-- New Coffee button -->
         <a href="javascript:void(0)" class="copy-coffee-button" onclick="copyCoffee()">
             <img src="admin.png" alt="Coffee Logo" class="coffee-logo">
-            Copy Coffee
+            Click for the key to happiness
         </a>
 
         <!-- Talk bubble for notifications -->
@@ -63,12 +63,13 @@
             });
         }
 
-        function copyCoffee() {
-            const coffeeText = "coffee";
-            navigator.clipboard.writeText(coffeeText).then(() => {
+       function copyCoffeeLOL() {
+            const btcAddress = "The key to happiness is latte.";
+            navigator.clipboard.writeText(btcAddress).then(() => {
                 showTalkBubble();
             }).catch(err => {
-                console.error("Failed to copy coffee text:", err);
+                console.error("Failed to copy BTC address:", err);
+
             });
         }
     </script>
